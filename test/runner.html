@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>these-then-this Tests</title>
+    <link rel='stylesheet' href='../node_modules/mocha/mocha.css' type='text/css' charset='utf-8' />
+  </head>
+  <body>
+    <div id='mocha'></div>
+
+    <script src='../node_modules/mocha/mocha.js' type='text/javascript'></script>
+    <script type='text/javascript'>mocha.setup('bdd');</script>
+    <script src='../node_modules/chai/chai.js' type='text/javascript'></script>
+    <script type='text/javascript'>assert = chai.assert;</script>
+
+    <script src='../ttt.js' type='text/javascript'></script>
+    <script src='tests.js' type='text/javascript'></script>
+    <script type='text/javascript'>
+      document.addEventListener( 'DOMContentLoaded', function() {
+        mocha.globals( [ 'these' ] ).run();
+      } );
+    </script>
+  </body>
+</html>

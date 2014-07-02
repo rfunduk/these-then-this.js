@@ -1,0 +1,26 @@
+{
+  "name": "these-then-this",
+  "version": "0.0.1",
+  "author": "Ryan Funduk <ryan.funduk@gmail.com>",
+  "description": "The simplest async function.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rfunduk/these-then-this.git"
+  },
+  "keywords": [
+    "async"
+  ],
+  "devDependencies": {
+    "grunt": "0.4.1",
+    "grunt-mocha": "~0.4.10",
+    "chai": "^1.9.1",
+    "mocha": "^1.20.1",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-replace": "^0.7.8",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  }
+}

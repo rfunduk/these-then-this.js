@@ -1,0 +1,19 @@
+{
+  "name": "these-then-this",
+  "version": "0.0.1",
+  "homepage": "https://github.com/rfunduk/these-then-this",
+  "authors": [ "Ryan Funduk <ryan.funduk@gmail.com>" ],
+  "main": [ "./ttt.js" ],
+  "dependencies": {},
+  "description": "The simplest async function.",
+  "moduleType": [ "globals" ],
+  "keywords": [ "async" ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "site",
+    "Gruntfile.js"
+  ]
+}
