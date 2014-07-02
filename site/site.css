@@ -75,6 +75,10 @@ pre, pre code {
   letter-spacing: -1px;
 }
 
+code {
+  font-family: 'Fira Mono', Consolas, 'Liberation Mono', Menlo, Monaco, Consolas, monospace;
+}
+
 /*
 Railscasts-like style (c) Visoft, Inc. (Damien White)
 */
