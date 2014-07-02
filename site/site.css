@@ -47,6 +47,7 @@ pre a {
   letter-spacing: 0;
   text-decoration: none;
   border-top-left-radius: 2px;
+  color: #444;
 }
 
 /* CODE STYLE */
@@ -74,38 +75,181 @@ pre, pre code {
   letter-spacing: -1px;
 }
 
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-pre .comment, pre .title {
-  color: #8e908c;
+/*
+Railscasts-like style (c) Visoft, Inc. (Damien White)
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
 }
 
-pre .variable, pre .attribute, pre .tag, pre .regexp, pre .ruby .constant, pre .xml .tag .title, pre .xml .pi, pre .xml .doctype, pre .html .doctype, pre .css .id, pre .css .class, pre .css .pseudo {
-  color: #c82829;
+.hljs-comment,
+.hljs-template_comment,
+.hljs-javadoc,
+.hljs-shebang {
+  color: #bc9458;
+  font-style: italic;
 }
 
-pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
-  color: #f5871f;
+.hljs-keyword,
+.ruby .hljs-function .hljs-keyword,
+.hljs-request,
+.hljs-status,
+.nginx .hljs-title,
+.method,
+.hljs-list .hljs-title {
+  color: #c26230;
 }
 
-pre .class, pre .ruby .class .title, pre .css .rules .attribute {
-  color: #eab700;
+.hljs-string,
+.hljs-number,
+.hljs-regexp,
+.hljs-tag .hljs-value,
+.hljs-cdata,
+.hljs-filter .hljs-argument,
+.hljs-attr_selector,
+.apache .hljs-cbracket,
+.hljs-date,
+.tex .hljs-command,
+.markdown .hljs-link_label {
+  color: #658231;
 }
 
-pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
-  color: #718c00;
+.hljs-subst {
+  color: #519f50;
 }
 
-pre .css .hexcolor {
-  color: #3e999f;
+.hljs-tag,
+.hljs-tag .hljs-keyword,
+.hljs-tag .hljs-title,
+.hljs-doctype,
+.hljs-sub .hljs-identifier,
+.hljs-pi,
+.input_number {
+  color: #e8bf6a;
 }
 
-pre .function, pre .python .decorator, pre .python .title, pre .ruby .function .title, pre .ruby .title .keyword, pre .perl .sub, pre .javascript .title, pre .coffeescript .title {
-  color: #4271ae;
+.hljs-identifier {
+  color: #d0d0ff;
 }
 
-pre .keyword, pre .javascript .function {
-  color: #8959a8;
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.smalltalk .hljs-class,
+.hljs-javadoctag,
+.hljs-yardoctag,
+.hljs-phpdoc {
+  text-decoration: none;
+}
+
+.hljs-constant {
+  color: #da4939;
+}
+
+
+.hljs-symbol,
+.hljs-built_in,
+.ruby .hljs-symbol .hljs-string,
+.ruby .hljs-symbol .hljs-identifier,
+.markdown .hljs-link_url,
+.hljs-attribute {
+  color: #6d9cbe;
+}
+
+.markdown .hljs-link_url {
+  text-decoration: underline;
+}
+
+
+
+.hljs-params,
+.hljs-variable,
+.clojure .hljs-attribute {
+  color: #8685ac;
+}
+
+.css .hljs-tag,
+.hljs-rules .hljs-property,
+.hljs-pseudo,
+.tex .hljs-special {
+  color: #cda869;
+}
+
+.css .hljs-class {
+  color: #9b703f;
+}
+
+.hljs-rules .hljs-keyword {
+  color: #c5af75;
+}
+
+.hljs-rules .hljs-value {
+  color: #cf6a4c;
+}
+
+.css .hljs-id {
+  color: #8b98ab;
+}
+
+.hljs-annotation,
+.apache .hljs-sqbracket,
+.nginx .hljs-built_in {
+  color: #9b859d;
+}
+
+.hljs-preprocessor,
+.hljs-preprocessor *,
+.hljs-pragma {
+  color: #8996a8 !important;
+}
+
+.hljs-hexcolor,
+.css .hljs-value .hljs-number {
+  color: #a5c261;
+}
+
+.hljs-title,
+.hljs-decorator,
+.css .hljs-function {
+  color: #ffc66d;
+}
+
+.diff .hljs-header,
+.hljs-chunk {
+  background-color: #2f33ab;
+  color: #e6e1dc;
+  display: inline-block;
+  width: 100%;
+}
+
+.diff .hljs-change {
+  background-color: #4a410d;
+  color: #f8f8f8;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-addition {
+  background-color: #144212;
+  color: #e6e1dc;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-deletion {
+  background-color: #600;
+  color: #e6e1dc;
+  display: inline-block;
+  width: 100%;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.7;
 }
