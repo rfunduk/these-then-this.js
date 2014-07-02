@@ -33,13 +33,13 @@
           A dependency for just one tiny back corner of my app :(
         </p>
         <p>
-          Instead I wrote ~450 bytes that did the job.
+          Instead I wrote ~500 bytes that did the job.
           Here it is (and <a href='https://github.com/rfunduk/these-then-this.js'>on GitHub</a>):
         </p>
 
-        <div class='results' id='ttt'><a href='javascript:void(0);'>done</a></div><pre data-results='ttt' data-src='ttt.js'><code>window.these = function() {
+        <div class='results' id='ttt'><a href='javascript:void(0);'>done</a></div><pre class='highlight' data-results='ttt' data-src='ttt.js'><code>window.these = function() {
   if( !(this instanceof these) ) { return new these( arguments ); }
-  this.functions = Array.prototype.slice.call( arguments[0] );
+  this.functions = [].concat.apply( [], [].slice.call( arguments[0] ) );
   this.results = {};
 };
 
@@ -54,9 +54,25 @@ these.prototype.thenThis = function( cb ) {
   return this;
 };</code></pre>
 
-        <h2>Use It Like This</h2>
 
-        <div class='results' id='example1'><a href='javascript:void(0);'>done</a></div><pre data-results='example1' data-src='example1.js'><code>these(
+        <h3>Install It</h3>
+
+        <p>
+          Copy/paste the code above into your project. Or, if you must:
+        </p>
+
+        <pre><code>bower install these-then-this</code></pre>
+
+
+        <h3>Usage</h3>
+
+        <p>
+          Pass functions to <code>these</code> as either an array
+          or multiple arguments. Then call <code>thenThis</code> on
+          the result with a callback:
+        </p>
+
+        <div class='results' id='example1'><a href='javascript:void(0);'>done</a></div><pre class='highlight' data-results='example1' data-src='example1.js'><code>these(
   function( cb ) {
     cb( 'sync', 'some' + 'sync' + 'work' );
   },
@@ -71,7 +87,7 @@ these.prototype.thenThis = function( cb ) {
           You can also check on the progress:
         </p>
 
-        <div class='results' id='example2'><a href='javascript:void(0);'>done</a></div><pre data-results='example2' data-src='example2.js'><code>var those = these(
+        <div class='results' id='example2'><a href='javascript:void(0);'>done</a></div><pre class='highlight' data-results='example2' data-src='example2.js'><code>var those = these(
   function( cb ) { cb( 'quick', 1 ); },
   function( cb ) { setTimeout( function() { cb( 'slow', 2 ); }, 1000 ) }
 ).thenThis( function( results ) {

@@ -11,8 +11,7 @@ module.exports = function( grunt ) {
         src: [ 'test/runner.html' ],
         options: {
           mocha: { ignoreLeaks: false },
-          reporter: 'Dot',
-          run: true
+          reporter: 'Spec'
         }
       }
     },
@@ -33,7 +32,7 @@ module.exports = function( grunt ) {
                 console.log( arguments );
                 return [
                   "<div class='results' id='" + filename + "'><a href='javascript:void(0);'>done</a></div>",
-                  "<pre data-results='" + filename + "' data-src='" + filename + ".js'><code>",
+                  "<pre class='highlight' data-results='" + filename + "' data-src='" + filename + ".js'><code>",
                   grunt.file.read( 'site/inline/' + filename + '.js' ).trim(),
                   "</code></pre>"
                 ].join('');

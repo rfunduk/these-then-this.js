@@ -1,5 +1,5 @@
 document.addEventListener( 'DOMContentLoaded', function() {
-  var toHighlight = document.querySelectorAll('pre');
+  var toHighlight = document.querySelectorAll('pre.highlight');
   Array.prototype.forEach.call( toHighlight, function( el, i ) {
     hljs.highlightBlock( el );
     var src = el.getAttribute('data-src');

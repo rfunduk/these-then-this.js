@@ -8,11 +8,19 @@ describe( 'these', function() {
 } );
 
 describe( 'these(fns)', function() {
+  it( 'should accept an array of functions', function( done ) {
+    these( [
+      function( cb ) { cb( 'a', 1 ); },
+      function( cb ) { cb( 'b', 2 ); }
+    ] ).thenThis( function( r ) {
+      assert.deepEqual( { a: 1, b: 2 }, r );
+      done();
+    } );
+  } );
+
   it( 'should not run the functions by itself', function( done ) {
     var count = 0;
-    these(
-      function(cb) { count++; cb('fn', 1); }
-    );
+    these( function( cb ) { count++; cb( 'fn', 1 ); } );
     setTimeout( function() {
       assert.equal( count, 0 );
       done();
@@ -33,9 +41,9 @@ describe( 'these(fns).thenThis(cb)', function() {
   it( 'should run all functions', function( done ) {
     var count = 0;
     these(
-      function(cb) { count++; cb(); },
-      function(cb) { count++; cb(); },
-      function(cb) { count++; cb(); }
+      function( cb ) { count++; cb(); },
+      function( cb ) { count++; cb(); },
+      function( cb ) { count++; cb(); }
     ).thenThis( function() {
       assert.equal( count, 3 );
       done();

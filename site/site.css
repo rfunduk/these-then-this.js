@@ -18,7 +18,7 @@ p {
   font-family: 'Fira Mono', Consolas, 'Liberation Mono', Menlo, Monaco, Consolas, monospace;
   padding: 10px;
   background: white;
-  border: 1px solid #CCC;
+  border: 1px solid #DDD;
   position: relative;
   margin-bottom: 20px;
 }
@@ -57,7 +57,7 @@ pre {
   overflow-x: auto;
   position: relative;
   box-sizing: border-box;
-  border: 1px solid #ccc;
+  border: 1px solid #DDD;
 }
 
   pre code {

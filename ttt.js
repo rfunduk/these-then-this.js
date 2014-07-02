@@ -1,6 +1,6 @@
 window.these = function() {
   if( !(this instanceof these) ) { return new these( arguments ); }
-  this.functions = Array.prototype.slice.call( arguments[0] );
+  this.functions = [].concat.apply( [], [].slice.call( arguments[0] ) );
   this.results = {};
 };
 
