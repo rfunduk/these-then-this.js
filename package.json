@@ -5,7 +5,7 @@
   "description": "The simplest async function.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rfunduk/these-then-this.git"
+    "url": "https://github.com/rfunduk/these-then-this.js.git"
   },
   "keywords": [
     "async"
