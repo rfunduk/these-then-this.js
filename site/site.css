@@ -12,6 +12,10 @@ p {
   margin-bottom: 75px;
 }
 
+h3 {
+  margin-top: 50px;
+}
+
 .results {
   display: none;
   box-sizing: border-box;
