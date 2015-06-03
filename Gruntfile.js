@@ -29,7 +29,6 @@ module.exports = function( grunt ) {
             {
               match: /<!-- code (.+?) -->/g,
               replacement: function( match, filename ) {
-                console.log( arguments );
                 return [
                   "<div class='results' id='" + filename + "'><a href='javascript:void(0);'>done</a></div>",
                   "<pre class='highlight' data-results='" + filename + "' data-src='" + filename + ".js'><code>",
